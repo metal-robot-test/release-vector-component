@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("release-vector-component 2")
+	fmt.Println("release-vector-component 3")
 }
