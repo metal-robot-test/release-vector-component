@@ -2,16 +2,15 @@
 name: metal-stack component release
 
 on:
-  pull_request:
-    branches:
-      - main
-  release:
-    types:
-      - published
   push:
     branches:
       - main
 
 jobs:
   draft:
-    uses: metal-stack/actions-common/.github/workflows/release-drafter.yaml@v1
+    name: Generate Release Draft
+    runs-on: ubuntu-latest
+    steps:
+    - uses: release-drafter/release-drafter@v7
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
